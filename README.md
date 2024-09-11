@@ -1,17 +1,58 @@
+
 # installer-lib
 
- Make installers easy
+installer lib real
 
-## How to use
+## Actions:
 
-Heres a quick example:
+```html
+download_file <url> <location>
+create_folder <path>
+copy_file <src> <destination>
+move_file <src> <destination>
+unpack_archive <archive> <destination>
 
-```python3
-from installer-lib import *
+create_shortcut <path> <name> <destination> <icon>
 
-installer = installer('Example', '1.0',('127.0.0.1',5000),False) # args: appName, appVer, fileServer (tuple of server ip, port), gui (Enable gui or not)
-installer.gui()     # Use this is you want to use the gui from installer-lib, only downloads files...
-installer.install() # And use this if you just want to immidiately download files, and run our own script after its done.
+set <var> <value>
+copy_var <from> <to>
+
+add <value> <value>
+substract <value> <value>
+multiply <value> <value>
+divide <value> <value>
 ```
 
-I will add more utils soon, suggest in the github issues!
+## Control flow:
+
+```html
+namespace <name> ()
+use <library> [as <name>]
+
+routine <name> ()
+call <routine>
+jump <line>
+return [<amount>=1]
+
+if [not] <condition> <routine>
+else <routine>
+loop <n-times> <routine>
+while <condition> <routine>
+break [<amount>=1]
+continue [<amount>=1]
+```
+
+## Conditions
+
+```html
+a == b
+a != b
+a > b
+a < b
+a >= b
+a <= b
+a or b
+a and b
+a nor b
+!a
+```

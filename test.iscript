@@ -1,0 +1,17 @@
+
+namespace main (
+
+    set DOWNLOAD_URL https://Omena0.github.io/api/Fr-client/main.zip
+    set INSTALL_DIR %appdata%/.Fr-client/
+
+    download_file DOWNLOAD_URL main.zip
+
+    unpack_archive main.zip main
+
+    create_folder INSTALL_DIR
+
+    move_file main INSTALL_DIR
+
+    create_shortcut %desktop% Fr-client INSTALL_DIR/Fr-client.exe INSTALL_DIR/Fr-client.ico
+
+)
